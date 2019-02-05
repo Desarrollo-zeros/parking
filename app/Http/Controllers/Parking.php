@@ -101,7 +101,7 @@ class Parking extends Controller
                 $data = [
                     "username"=> $request->post("username"),
                     "email"=> $request->post("email"),
-                    "password"=> $request->post("password"),
+                    "password"=>  sha1($request->post("password")),
                     "rol" => $request->post("rol")
                 ];
 
@@ -123,7 +123,7 @@ class Parking extends Controller
                 $data = [
                     "username"=> $request->post("username"),
                     "email"=> $request->post("email"),
-                    "password"=> $request->post("password"),
+                    "password"=>  sha1($request->post("password")),
                     "rol" => $request->post("rol")
                 ];
                 return response()->json($usuarios->updater($id,$data));
