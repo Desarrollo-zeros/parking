@@ -138,6 +138,8 @@ class Parking extends Controller
         }
     }
 
+    // Hola Carloas tienes que aprender a esribir en cualquier computador imagínate cuando entres a trabaja
+
     public function gestionPuesto(Request $request, Puestos $puestos, $opcion){
         switch ($opcion){
             case 1:{
